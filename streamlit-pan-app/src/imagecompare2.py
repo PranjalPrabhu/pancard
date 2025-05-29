@@ -3,7 +3,7 @@ import os
 import matplotlib.pyplot as plt
 import time
 
-database_folder = "C:\\Users\\pranjal.prabhu\\Desktop\\image\\archive\\images-high-res"
+database_folder = "archive/images-high-res"
 uploaded_image_path = "C:\\Users\\pranjal.prabhu\\Pictures\\image2.PNG"
 
 def detect_and_crop_face(image_path):
