@@ -22,8 +22,8 @@ def main():
 
     # --- Model Update Section ---
     st.sidebar.header("Model Settings")
-    default_model_path = "C:\\Users\\pranjal.prabhu\\Desktop\\streamlit_2\\streamlit-pan-app\\model\\best.pt"
-    # default_model_path = 'streamlit-pan-app\\model\\best.pt'
+    # default_model_path = "C:\\Users\\pranjal.prabhu\\Desktop\\streamlit_2\\streamlit-pan-app\\model\\best.pt"
+    default_model_path = 'streamlit-pan-app\\model\\best.pt'
     uploaded_model = st.sidebar.file_uploader("Upload new YOLO model (.pt)", type=["pt"])
     if uploaded_model is not None:
         temp_model_path = os.path.join(tempfile.gettempdir(), uploaded_model.name)
@@ -56,8 +56,8 @@ def main():
         file_bytes = np.asarray(bytearray(uploaded_face_file.read()), dtype=np.uint8)
         face_image = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
         import time
-        database_folder = "C:\\Users\\pranjal.prabhu\\Desktop\\streamlit_2\\archive\\images-high-res"
-        # database_folder = 'archive\\images-high-res'
+        # database_folder = "C:\\Users\\pranjal.prabhu\\Desktop\\streamlit_2\\archive\\images-high-res"
+        database_folder = 'archive\\images-high-res'
         with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as tmp:
             cv2.imwrite(tmp.name, face_image)
             temp_face_path = tmp.name
