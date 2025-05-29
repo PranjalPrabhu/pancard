@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def detect_pan_card_fields(image):
-    model = YOLO("C:\\Users\\pranjal.prabhu\\Desktop\\image\\runs\\detect\\train\\weights\\best.pt")
+    model = YOLO("model/best.pt")
     results = model(image)
     boxes = results[0].boxes.xyxy.cpu().numpy()
     class_ids = results[0].boxes.cls.cpu().numpy().astype(int)
