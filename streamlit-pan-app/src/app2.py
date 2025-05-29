@@ -22,7 +22,7 @@ def main():
 
     # --- Model Update Section ---
     st.sidebar.header("Model Settings")
-    default_model_path = 'model\best.pt'
+    default_model_path = 'model/best.pt'
     uploaded_model = st.sidebar.file_uploader("Upload new YOLO model (.pt)", type=["pt"])
     if uploaded_model is not None:
         temp_model_path = os.path.join(tempfile.gettempdir(), uploaded_model.name)
