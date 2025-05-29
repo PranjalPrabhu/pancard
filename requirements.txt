@@ -6,3 +6,4 @@ matplotlib
 supervision
 Pillow
 scikit-image
+libgl1-mesa-glx
