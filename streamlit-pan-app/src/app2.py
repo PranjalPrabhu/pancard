@@ -55,8 +55,7 @@ def main():
         file_bytes = np.asarray(bytearray(uploaded_face_file.read()), dtype=np.uint8)
         face_image = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
         import time
-        # database_folder = "C:\\Users\\pranjal.prabhu\\Desktop\\streamlit_2\\archive\\images-high-res"
-        database_folder = 'archive\\images-high-res'
+        database_folder = 'archive/images-high-res'
         with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as tmp:
             cv2.imwrite(tmp.name, face_image)
             temp_face_path = tmp.name
