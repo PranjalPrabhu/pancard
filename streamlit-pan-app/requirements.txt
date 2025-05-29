@@ -1,0 +1,8 @@
+streamlit
+opencv-python
+ultralytics
+easyocr
+matplotlib
+supervision
+Pillow
+scikit-image
